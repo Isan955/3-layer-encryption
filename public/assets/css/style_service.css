@@ -1,0 +1,91 @@
+
+.service-section {
+    padding: 50px 0;
+    text-align: center;
+    margin-top: -100px; /* Menurunkan posisi "Our Service" lebih jauh */
+}
+
+h2.tengah {
+    margin-bottom: 10px;  /* Mengurangi jarak bawah agar lebih rapat dengan "Shoes Cleaning" */
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 5px; /* Menghapus margin top agar tidak ada jarak dari atas */
+}
+
+h3.tengah {
+    margin-top: 5px; /* Mengurangi jarak atas agar lebih dekat dengan "Shoes Cleaning" */
+    margin-bottom: 0px; /* Menurunkan jarak bawah untuk membuatnya lebih dekat dengan pilihan layanan */
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Menambahkan sedikit jarak antara "Shoes Cleaning" dan pilihan layanan */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Memastikan layanan terpusat */
+    gap: 20px; /* Mengurangi jarak antar kartu layanan */
+    margin-top: 100px; /* Mengurangi jarak atas agar lebih rapat dengan "Shoes Cleaning" */
+}
+
+/* Gaya untuk setiap kartu layanan */
+.service-card {
+    background-color: #ececec;
+    width: 260px; /* Menyesuaikan ukuran kartu agar lebih rapat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-card .deskripsi {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-card a.tbl-biru {
+    background-color: #ffbb00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.service-card a.tbl-biru:hover {
+    background-color: #c48f00;
+}
+
+/* Responsif untuk perangkat kecil */
+@media screen and (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .service-card {
+        width: 100%;
+    }
+}
