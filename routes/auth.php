@@ -9,7 +9,8 @@ Route::middleware('guest')->group(function () {
         ->name('register');
 
     Volt::route('login', 'pages.auth.login')
-        ->name('login');
+        ->name('login')    
+        ->middleware('throttle:5,5');
 
     Volt::route('forgot-password', 'pages.auth.forgot-password')
         ->name('password.request');

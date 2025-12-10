@@ -11,23 +11,19 @@ use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
-    /**
-     * Tampilkan daftar pesanan pengguna.
-     */
     public function index()
     {
-        $orders = Order::where('user_id', Auth::id())->get(); // Ambil pesanan berdasarkan ID user
+        $orders = Order::where('user_id', Auth::id())->get(); 
         return view('order.index', compact('orders'));
 
         if (Auth::check()) {
             $orders = Order::where('user_id', Auth::id())->get();
             return view('order.index', compact('order'));
         } else {
-            // Jika pengguna belum login, tampilkan halaman 403
             abort(403, 'Unauthorized access');
         }
 
-        $orders = Order::all(); // Ambil semua order
+        $orders = Order::all(); 
         return view('order');
     }
 

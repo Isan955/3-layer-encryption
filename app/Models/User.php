@@ -46,7 +46,10 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'password'
+            'password' => 'hashed', // <-- PENTING: Tambahkan '=> 'hashed' agar password tetap aman
+            
+            'pin' => 'encrypted',
+            'name' => 'encrypted', 
         ];
     }
 
