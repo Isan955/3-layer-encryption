@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\ServicePrice;
+use App\Services\LedgerIntegrityService;
 
 class AdminController extends Controller
 {
@@ -80,5 +81,11 @@ class AdminController extends Controller
     return redirect()->route('admin')->with('success', 'Akun berhasil dihapus!');
 }
 
-    
+    public function integrityCheck()
+{
+    $status = LedgerIntegrityService::verify();
+
+    return view('admin.integrity', compact('status'));
+}
+
 }

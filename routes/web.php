@@ -41,6 +41,8 @@ Route::get('/admin', [AdminController::class, 'index'])
     ->name('admin')
     ->middleware('role:admin');
 
+Route::get('/admin/integrity-check', [AdminController::class, 'integrityCheck'])
+    ->middleware('role:admin');
 
 // =======================
 // ROUTE USER & ORDER
