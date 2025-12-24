@@ -12,6 +12,7 @@ use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\ServicePriceController;
 use App\Http\Controllers\Admin\AdminOrderController;
 use App\Http\Controllers\CipherController;
+use App\Http\Controllers\SystemHealthController;
 
 
 // =======================
@@ -103,7 +104,8 @@ Route::middleware(['auth'])->group(function () {
     // Proses PIN dan tampilkan hasil
     Route::post('/cipher/result', [CipherController::class, 'result'])->name('cipher.result');
 });
-
+// C
+Route::get('/system-health', [SystemHealthController::class, 'index']);
 
 
 // =======================
